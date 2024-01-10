@@ -41,8 +41,15 @@
 ul li a{
     font-size: 20px;
 }
-
+.parent{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+}
 .box{
+    position: relative;
+    overflow: hidden;
     height: 240px;
     width:190px;
     border: 1px solid blue;
@@ -50,6 +57,7 @@ ul li a{
     margin-top: 40px;
     border-radius: 12px 12px 12px 12px;
     box-shadow: 2px 1px 1px 4px rgb(239, 236, 236);
+    transition: transform 0.3s;
 }
 
 .box:hover{
@@ -67,13 +75,30 @@ ul li a{
     margin-left: 24px;
     margin-top: 20px;
     background-color: white;
+    position: relative;
+    overflow: hidden;
 }
-img{
-    background-image: url(./);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.img{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
 }
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    max-height: 140px;
+    overflow-y: auto;
+  }
+  .box2:hover .image-description {
+    opacity: 1;
+  }
 .logo-container {
     display: flex;
     align-items: center; 
